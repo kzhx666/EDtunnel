@@ -1,16 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ],
-  "outputDirectory": "dist"
+    "version": 2,
+    "outputDirectory": "dist",
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/index.js" }
+    ]
 }
